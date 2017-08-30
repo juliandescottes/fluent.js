@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="defaultLanguage" content="en-US">
+    <meta name="availableLanguages" content="pl, en-US">
+    <link rel="localization" href="./localization/{locale}/overlay.ftl" />
+    <style>
+      .action {
+        background-color: #9999ff;
+        line-height: 1.5em;
+      }
+    </style>
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('button.action').addEventListener('click', () => {
+          alert('Install action triggered');
+        });
+      }, { once: true });
+    </script>
+    <script src="../fluent-web.js"></script>
+  </head>
+  <body style="display: none">
+    <p data-l10n-id="cta">
+    <a href="http://www.projectfluent.io"></a>
+    <button class="action"></button>
+    </p>
+  </body>
+</html>
